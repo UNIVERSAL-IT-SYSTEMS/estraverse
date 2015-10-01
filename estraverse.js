@@ -443,7 +443,7 @@
         if (node == null) {
             return false;
         }
-        return typeof node === 'object' && typeof node.type === 'string';
+        return typeof node === 'object' && (typeof node.type === 'string') || typeof node.type === 'number';
     }
 
     function isProperty(nodeType, key) {
